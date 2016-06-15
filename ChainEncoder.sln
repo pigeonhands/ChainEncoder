@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChainEncoder", "ChainEncoder\ChainEncoder.csproj", "{515B65E1-0E78-4F41-85B1-E1227D9DCFEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChainLink", "ChainLink\ChainLink.csproj", "{9CE950B7-66C7-4E54-B75A-8ECC53D72311}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefaultLinks", "DefaultLinks\DefaultLinks.csproj", "{669A8A3F-AA80-4D01-BCC4-94F9AD862071}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{515B65E1-0E78-4F41-85B1-E1227D9DCFEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{515B65E1-0E78-4F41-85B1-E1227D9DCFEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{515B65E1-0E78-4F41-85B1-E1227D9DCFEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{515B65E1-0E78-4F41-85B1-E1227D9DCFEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CE950B7-66C7-4E54-B75A-8ECC53D72311}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CE950B7-66C7-4E54-B75A-8ECC53D72311}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CE950B7-66C7-4E54-B75A-8ECC53D72311}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CE950B7-66C7-4E54-B75A-8ECC53D72311}.Release|Any CPU.Build.0 = Release|Any CPU
+		{669A8A3F-AA80-4D01-BCC4-94F9AD862071}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{669A8A3F-AA80-4D01-BCC4-94F9AD862071}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{669A8A3F-AA80-4D01-BCC4-94F9AD862071}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{669A8A3F-AA80-4D01-BCC4-94F9AD862071}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
