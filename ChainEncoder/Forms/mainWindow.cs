@@ -73,9 +73,9 @@ namespace ChainEncoder.Forms
                 return;
             }
             string currentString = rtbInput.Text;
-
             Stopwatch sw = new Stopwatch();
             bool success = true;
+            StringBuilder sb = new StringBuilder();
 
             foreach (ListViewItem i in lvChain.Items)
             {
@@ -94,6 +94,9 @@ namespace ChainEncoder.Forms
                         throw new Exception("Invalid Link");
                     ILink link = ((LinkListViewItem)i).AssociatedLink;
                     currentString = cbDecode.Checked ? link.Decode(currentString) : link.Encode(currentString);
+                    if (sb.Length != 0)
+                        sb.Append(" > ");
+                    sb.Append(link.Name);
                 }
                 catch(Exception ex)
                 {
@@ -108,6 +111,11 @@ namespace ChainEncoder.Forms
                     i.SubItems[3].Text = currentString;
                 }
                 sw.Reset();
+
+                if(cbDecode.Checked)
+                    tbDecryptChain.Text = "[D] " + sb.ToString();
+                else
+                    tbDecryptChain.Text = sb.ToString();
             }
 
             rtbOutput.Text = success ? currentString : string.Empty;

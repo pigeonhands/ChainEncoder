@@ -38,14 +38,16 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnRun = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.cmChain = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmAdd = new System.Windows.Forms.ToolStripMenuItem();
             this.removeSelectedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reverseChainToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cbDecode = new System.Windows.Forms.CheckBox();
             this.copySelectedStateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reverseChainToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnRun = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cbDecode = new System.Windows.Forms.CheckBox();
+            this.tbDecryptChain = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.cmChain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -121,9 +123,46 @@
             this.columnHeader4.Text = "Current State";
             this.columnHeader4.Width = 157;
             // 
+            // cmChain
+            // 
+            this.cmChain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmAdd,
+            this.removeSelectedToolStripMenuItem,
+            this.copySelectedStateToolStripMenuItem,
+            this.reverseChainToolStripMenuItem});
+            this.cmChain.Name = "cmChain";
+            this.cmChain.Size = new System.Drawing.Size(179, 92);
+            // 
+            // tsmAdd
+            // 
+            this.tsmAdd.Name = "tsmAdd";
+            this.tsmAdd.Size = new System.Drawing.Size(178, 22);
+            this.tsmAdd.Text = "Add";
+            // 
+            // removeSelectedToolStripMenuItem
+            // 
+            this.removeSelectedToolStripMenuItem.Name = "removeSelectedToolStripMenuItem";
+            this.removeSelectedToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.removeSelectedToolStripMenuItem.Text = "Remove Selected";
+            this.removeSelectedToolStripMenuItem.Click += new System.EventHandler(this.removeSelectedToolStripMenuItem_Click);
+            // 
+            // copySelectedStateToolStripMenuItem
+            // 
+            this.copySelectedStateToolStripMenuItem.Name = "copySelectedStateToolStripMenuItem";
+            this.copySelectedStateToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.copySelectedStateToolStripMenuItem.Text = "Copy Selected State";
+            this.copySelectedStateToolStripMenuItem.Click += new System.EventHandler(this.copySelectedStateToolStripMenuItem_Click);
+            // 
+            // reverseChainToolStripMenuItem
+            // 
+            this.reverseChainToolStripMenuItem.Name = "reverseChainToolStripMenuItem";
+            this.reverseChainToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.reverseChainToolStripMenuItem.Text = "Reverse Chain";
+            this.reverseChainToolStripMenuItem.Click += new System.EventHandler(this.reverseChainToolStripMenuItem_Click);
+            // 
             // btnRun
             // 
-            this.btnRun.Location = new System.Drawing.Point(136, 399);
+            this.btnRun.Location = new System.Drawing.Point(147, 423);
             this.btnRun.Name = "btnRun";
             this.btnRun.Size = new System.Drawing.Size(111, 23);
             this.btnRun.TabIndex = 5;
@@ -141,58 +180,41 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Current Chain";
             // 
-            // cmChain
-            // 
-            this.cmChain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmAdd,
-            this.removeSelectedToolStripMenuItem,
-            this.copySelectedStateToolStripMenuItem,
-            this.reverseChainToolStripMenuItem});
-            this.cmChain.Name = "cmChain";
-            this.cmChain.Size = new System.Drawing.Size(179, 114);
-            // 
-            // tsmAdd
-            // 
-            this.tsmAdd.Name = "tsmAdd";
-            this.tsmAdd.Size = new System.Drawing.Size(164, 22);
-            this.tsmAdd.Text = "Add";
-            // 
-            // removeSelectedToolStripMenuItem
-            // 
-            this.removeSelectedToolStripMenuItem.Name = "removeSelectedToolStripMenuItem";
-            this.removeSelectedToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-            this.removeSelectedToolStripMenuItem.Text = "Remove Selected";
-            this.removeSelectedToolStripMenuItem.Click += new System.EventHandler(this.removeSelectedToolStripMenuItem_Click);
-            // 
-            // reverseChainToolStripMenuItem
-            // 
-            this.reverseChainToolStripMenuItem.Name = "reverseChainToolStripMenuItem";
-            this.reverseChainToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-            this.reverseChainToolStripMenuItem.Text = "Reverse Chain";
-            this.reverseChainToolStripMenuItem.Click += new System.EventHandler(this.reverseChainToolStripMenuItem_Click);
-            // 
             // cbDecode
             // 
             this.cbDecode.AutoSize = true;
-            this.cbDecode.Location = new System.Drawing.Point(15, 369);
+            this.cbDecode.Location = new System.Drawing.Point(12, 398);
             this.cbDecode.Name = "cbDecode";
             this.cbDecode.Size = new System.Drawing.Size(64, 17);
             this.cbDecode.TabIndex = 8;
             this.cbDecode.Text = "Decode";
             this.cbDecode.UseVisualStyleBackColor = true;
             // 
-            // copySelectedStateToolStripMenuItem
+            // tbDecryptChain
             // 
-            this.copySelectedStateToolStripMenuItem.Name = "copySelectedStateToolStripMenuItem";
-            this.copySelectedStateToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
-            this.copySelectedStateToolStripMenuItem.Text = "Copy Selected State";
-            this.copySelectedStateToolStripMenuItem.Click += new System.EventHandler(this.copySelectedStateToolStripMenuItem_Click);
+            this.tbDecryptChain.Location = new System.Drawing.Point(76, 369);
+            this.tbDecryptChain.Name = "tbDecryptChain";
+            this.tbDecryptChain.ReadOnly = true;
+            this.tbDecryptChain.Size = new System.Drawing.Size(316, 20);
+            this.tbDecryptChain.TabIndex = 9;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(9, 372);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(59, 13);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Last Used:";
             // 
             // mainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(404, 434);
+            this.ClientSize = new System.Drawing.Size(404, 458);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.tbDecryptChain);
             this.Controls.Add(this.cbDecode);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnRun);
@@ -230,5 +252,7 @@
         private System.Windows.Forms.ToolStripMenuItem reverseChainToolStripMenuItem;
         private System.Windows.Forms.CheckBox cbDecode;
         private System.Windows.Forms.ToolStripMenuItem copySelectedStateToolStripMenuItem;
+        private System.Windows.Forms.TextBox tbDecryptChain;
+        private System.Windows.Forms.Label label4;
     }
 }

@@ -19,7 +19,7 @@ namespace DefaultLinks
 
         public string Encode(string input)
         {
-            return Convert.ToBase64String(Encoding.UTF8.GetBytes(input));
+            return Convert.ToBase64String(Encoding.UTF8.GetBytes(WebUtility.UrlEncode(input)));
         }
     }
 }
